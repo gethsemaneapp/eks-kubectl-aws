@@ -1,1 +1,1 @@
-# eks-kubectl-aws
+# deploy-to-eks-using-github-actions

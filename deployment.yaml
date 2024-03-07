@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jojo
+  labels:
+    app: jojo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jojo
+  template:
+    metadata:
+      labels:
+        app: jojo
+    spec:
+      containers:
+        - name: jojo
+          image: 335444884074.dkr.ecr.ap-south-1.amazonaws.com/jojo:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
